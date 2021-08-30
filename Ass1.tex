@@ -184,16 +184,7 @@ The line joining  $\vec{BC}$ divided into the ratio l:k at point of division $\v
     \brak{l+k}\vec{P}=l\vec{C}+k\vec{B}
 \end{align}
 \begin{align}
-    \brak{l+k}\vec{P}=\myvec{\vec{C} & \vec{B}}\myvec{l\\k}
-\end{align}
-\begin{align}
-     \vec{P}=\frac{1}{l+k}\myvec{x_2&x_1\\y_2&y_1}\myvec{l\\k}
-\end{align}
-\begin{align}
-     \vec{P}=\frac{1}{l+k}\myvec{x_2l+x_1k\\y_2l+y_1k}
-\end{align}
-\begin{align}
-     \vec{P}=\myvec{\frac{x_2l+x_1k}{l+k}\\\frac{y_2l+y_1k}{l+k}}
+    \brak{l+k}\vec{P}=\myvec{\vec{C} & \vec{B}}\myvec{l\\k}\label{t2}
 \end{align}
 Now,the line joining $\vec{PA}$ divided into the ratio m:k+l at point of division $\vec{Q}$ can be written as
 \begin{align}
@@ -203,16 +194,17 @@ Now,the line joining $\vec{PA}$ divided into the ratio m:k+l at point of divisio
     \brak{l+k}\brak{\vec{Q-P}}=m\brak{\vec{A-Q}}
 \end{align}
 \begin{align}
-    \brak{l+k+m}\vec{Q}=m\vec{A}+\brak{l+k}\vec{P}
+    \brak{l+k+m}\vec{Q}=\brak{l+k}\vec{P}+m\vec{A}\label{t3}
+\end{align}
+From Eq.\ref{t2} substitute $\brak{l+k}\vec{P}$ in Eq.\ref{t3}
+\begin{align}
+    \brak{l+k+m}\vec{Q}=\myvec{\vec{C} & \vec{B}}\myvec{l\\k}+m\vec{A}
 \end{align}
 \begin{align}
-    \brak{l+k+m}\vec{Q}=\myvec{\vec{A} & \vec{P}}\myvec{m\\l+k}
+    \brak{l+k+m}\vec{Q}=\myvec{x_2&x_1\\y_2&y_1}\myvec{l\\k}+m\myvec{x_3\\y_3}
 \end{align}
 \begin{align}
-    \vec{Q}=\frac{1}{l+k+m}\myvec{x_3&\frac{x_2l+x_1k}{l+k}\\y_3&\frac{y_2l+y_1k}{l+k}}\myvec{m\\k+l}
-\end{align}
-\begin{align}
-    \vec{Q}=\frac{1}{l+k+m}\myvec{mx_3+\brak{k+l}\frac{x_2l+x_1k}{l+k}\\my_3+\brak{k+l}\frac{y_2l+y_1k}{l+k}}
+    \brak{l+k+m}\vec{Q}=\myvec{x_2l+x_1k\\y_2l+y_1k}+\myvec{mx_3\\my_3}
 \end{align}
 \begin{align}
     \vec{Q}=\frac{1}{l+k+m}\myvec{mx_3+x_2l+x_1k\\my_3+y_2l+y_1k}
