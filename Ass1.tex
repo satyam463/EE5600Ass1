@@ -168,10 +168,27 @@ https://github.com/satyam463/EE5600Ass1/blob/main/Ass1.tex
         \includegraphics[width =\linewidth]{Figure_1.png}
         \caption{Triangle}\label{t1}
 \end{figure}
-Consider Fig.\ref{t1} the line joining  $\vec{BC}$ divided into the ratio l:k
-can be written as
+Consider Fig.\ref{t1}
 \begin{align}
-    \vec{P}=\frac{1}{l+k}\myvec{x_2&x_1\\y_2&y_1}\myvec{l\\k}
+    \vec{B}=\myvec{x_1\\y_1},
+    \vec{C}=\myvec{x_2\\y_2},
+     \vec{A}=\myvec{x_3\\y_3}
+\end{align}
+The line joining  $\vec{BC}$ divided into the ratio l:k at point of division $\vec{P}$ can be written as
+\begin{align}
+    l\brak{\vec{CP}}=k\brak{\vec{PB}}
+\end{align}
+\begin{align}
+    l\brak{\vec{P-C}}=k\brak{\vec{B-P}}
+\end{align}
+\begin{align}
+    \brak{l+k}\vec{P}=l\vec{C}+k\vec{B}
+\end{align}
+\begin{align}
+    \brak{l+k}\vec{P}=\myvec{C & B}\myvec{l\\k}
+\end{align}
+\begin{align}
+     \vec{P}=\frac{1}{l+k}\myvec{x_2&x_1\\y_2&y_1}\myvec{l\\k}
 \end{align}
 \begin{align}
      \vec{P}=\frac{1}{l+k}\myvec{x_2l+x_1k\\y_2l+y_1k}
@@ -179,8 +196,19 @@ can be written as
 \begin{align}
      \vec{P}=\myvec{\frac{x_2l+x_1k}{l+k}\\\frac{y_2l+y_1k}{l+k}}
 \end{align}
-Now,the line joining $\vec{PA}$ divided into the ratio m:k+l
-can be written as
+Now,the line joining $\vec{PA}$ divided into the ratio m:k+l at point of division $\vec{Q}$ can be written as
+\begin{align}
+    \brak{l+k}\brak{\vec{PQ}}=m\brak{\vec{QA}}
+\end{align}
+\begin{align}
+    \brak{l+k}\brak{\vec{Q-P}}=m\brak{\vec{A-Q}}
+\end{align}
+\begin{align}
+    \brak{l+k+m}\vec{Q}=m\vec{A}+\brak{l+k}\vec{P}
+\end{align}
+\begin{align}
+    \brak{l+k+m}\vec{Q}=\myvec{A & P}\myvec{m\\l+k}
+\end{align}
 \begin{align}
     \vec{Q}=\frac{1}{l+k+m}\myvec{x_3&\frac{x_2l+x_1k}{l+k}\\y_3&\frac{y_2l+y_1k}{l+k}}\myvec{m\\k+l}
 \end{align}
@@ -193,7 +221,6 @@ can be written as
 \begin{align}
     \vec{Q}=\myvec{\frac{mx_3+x_2l+x_1k}{l+k+m}\\\frac{my_3+y_2l+y_1k}{l+k+m}}
 \end{align}
-
 Hence, Q is the required coordinate of the latter point of section.
 \end{document}
 
