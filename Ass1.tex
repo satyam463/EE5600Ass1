@@ -160,7 +160,7 @@ Download  tex file from
 https://github.com/satyam463/EE5600Ass1/blob/main/Ass1.tex
 \end{lstlisting}
 \section{Problem Statement}
-22.The coordinates of vertices of a triangle are \brak{x_1,y_1},\brak{x_2,y_2},and \brak{x_3,y_3}.The line joining the first two is divided into the ratio l:k, and line joining this point of division to the opposite angular point is then divided in the ratio m:k+1.Find the coordinates of the latter point of section.
+22.The coordinates of vertices of a triangle are \brak{x_1,y_1},\brak{x_2,y_2},and \brak{x_3,y_3}.The line joining the first two is divided into the ratio l:k, and line joining this point of division to the opposite angular point is then divided in the ratio m:k+l.Find the coordinates of the latter point of section.
 \section{Solution}
 \begin{figure}[h!]
        \centering
@@ -201,16 +201,10 @@ From Eq.\ref{t2} substitute $\brak{l+k}\vec{P}$ in Eq.\ref{t3}
     \brak{l+k+m}\vec{Q}=\myvec{\vec{C} & \vec{B}}\myvec{l\\k}+m\vec{A}
 \end{align}
 \begin{align}
-    \brak{l+k+m}\vec{Q}=\myvec{x_2&x_1\\y_2&y_1}\myvec{l\\k}+m\myvec{x_3\\y_3}
+    \brak{l+k+m}\vec{Q}=l\vec{C}+k\vec{B}+m\vec{A}
 \end{align}
 \begin{align}
-    \brak{l+k+m}\vec{Q}=\myvec{x_2l+x_1k\\y_2l+y_1k}+\myvec{mx_3\\my_3}
-\end{align}
-\begin{align}
-    \vec{Q}=\frac{1}{l+k+m}\myvec{mx_3+x_2l+x_1k\\my_3+y_2l+y_1k}
-\end{align}
-\begin{align}
-    \vec{Q}=\myvec{\frac{mx_3+x_2l+x_1k}{l+k+m}\\\frac{my_3+y_2l+y_1k}{l+k+m}}
+    \vec{Q}=\frac{1}{l+k+m}\myvec{\vec{C} & \vec{B} & \vec{A}}\myvec{l\\k\\m}
 \end{align}
 Hence, Q is the required coordinate of the latter point of section.
 \end{document}
