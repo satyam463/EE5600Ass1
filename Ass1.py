@@ -9,15 +9,14 @@ def line_gen(A,B):
     x_AB[:,i]= temp1.T
   return x_AB
 
-#Line points
-A = np.array([3.366,4.96])
-P = np.array([2,0])
-#Section ratio
-k = 5/8
-#Section point
-Q = (k*A+P)/(k+1)
-
-
+#Triangle vertices
+A = np.array([2,4])
+B = np.array([0,0])
+C = np.array([4,0])
+l,k,m=0.5,0.5,0.5
+P=(1/(l+k))*(np.column_stack((C,B))@np.array([l,k]).T)
+Q=(1/(l+m+k))*(np.column_stack((C,B,A))@np.array([l,k,m]).T)
+print(P,Q)
 #Generating all lines
 x_PQ = line_gen(P,Q)
 x_QA = line_gen(Q,A)
@@ -32,32 +31,15 @@ plt.plot(P[0], P[1], 'o')
 plt.text(P[0] * (1 - 0.2), P[1] * (1) , 'P')
 plt.plot(Q[0], Q[1], 'o')
 plt.text(Q[0] * (1 + 0.03), Q[1] * (1 - 0.1) , 'Q')
-plt.text(1, 0.08, 'l')
+plt.text(1.0,0.08,'l')
 plt.text(3.0, 0.08, 'k')
-plt.text(1.87, 0.9, 'm')
-plt.text(2.612, 3.19, 'l+k')
+plt.text(1.8, 0.75, 'm')
+plt.text(1.7, 2.59, 'k+l')
 
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid() # minor
-
-#if using termux
-#plt.savefig('../figs/section.pdf')
-#plt.savefig('../figs/section.eps')
-#subprocess.run(shlex.split("termux-open ../figs/section.pdf"))
-#else
-a = 4
-b = 5
-c = 6
-p = (a**2 + c**2-b**2 )/(2*a)
-q = np.sqrt(c**2-p**2)
-
-#Triangle vertices
-A = np.array([p,q])
-B = np.array([0,0])
-C = np.array([a,0])
-
 
 #Generating all lines
 x_AB = line_gen(A,B)
@@ -81,3 +63,7 @@ plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid() # minor
 plt.show()
+
+
+
+
