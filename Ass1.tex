@@ -1,4 +1,5 @@
 
+
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 
 \usepackage{setspace}
@@ -174,37 +175,21 @@ Consider Fig.\ref{t1}
     \vec{C}=\myvec{x_2\\y_2},
      \vec{A}=\myvec{x_3\\y_3}
 \end{align}
-The line joining BC divided into the ratio l:k at point of division $\vec{P}$ can be written as
+The line joining BC divided into the ratio l:k at point of division $\vec{P}$ can be written by using section formula
 \begin{align}
-    l\brak{\vec{CP}}=k\brak{\vec{PB}}
+    \vec{P}=\frac{l\vec{C}+k\vec{B}}{l+k}\label{yt}
 \end{align}
+Now,the line joining PA divided into the ratio m:k+l at point of division $\vec{Q}$ can be written by using section formula 
 \begin{align}
-    l\brak{\vec{P-C}}=k\brak{\vec{B-P}}
+    \vec{Q}=\frac{m\vec{A}+\brak{k+l}\vec{P}}{l+k+m}\label{t45}
 \end{align}
+From Eq.\ref{yt} substitute $\vec{P}$ in Eq.\ref{t45}
 \begin{align}
-    \brak{l+k}\vec{P}=l\vec{C}+k\vec{B}\label{t2}
-\end{align}
-\begin{align}
-    \brak{l+k}\vec{P}=\myvec{\vec{C} & \vec{B}}\myvec{l\\k}
-\end{align}
-Now,the line joining PA divided into the ratio m:k+l at point of division $\vec{Q}$ can be written as
-\begin{align}
-    \brak{l+k}\brak{\vec{PQ}}=m\brak{\vec{QA}}
-\end{align}
-\begin{align}
-    \brak{l+k}\brak{\vec{Q-P}}=m\brak{\vec{A-Q}}
-\end{align}
-\begin{align}
-    \brak{l+k+m}\vec{Q}=\brak{l+k}\vec{P}+m\vec{A}\label{t3}
-\end{align}
-From Eq.\ref{t2} substitute $\brak{l+k}\vec{P}$ in Eq.\ref{t3}
-\begin{align}
-    \brak{l+k+m}\vec{Q}=l\vec{C}+k\vec{B}+m\vec{A}
+    \vec{Q}=\frac{l\vec{C}+k\vec{B}+m\vec{A}}{l+k+m}
 \end{align}
 \begin{align}
     \vec{Q}=\frac{1}{l+k+m}\myvec{\vec{C} & \vec{B} & \vec{A}}\myvec{l\\k\\m}
 \end{align}
 Hence, $\vec{Q}$ is the required coordinate of the latter point of section.
 \end{document}
-
 
